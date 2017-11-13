@@ -42,14 +42,18 @@
         <preference name="phonegap-version"       value="3.5.0" />
     -->
     
-    <preference name='phonegap-version' value='cli-6.5.0' />
+    <preference name='phonegap-version' value='cli-7.0.1' />
 	<preference name='pgb-builder-version' value='1' />
 
     <!-- Plugins -->
 
     <!-- Core plugins -->
+    
+    <plugin name = "cordova-plugin-camera" version = "2.4.1" />
+  	<plugin name = "cordova-plugin-file" version = "4.3.3" />
+	<plugin name = "cordova-plugin-file-transfer" version = "1.6.3" />
+   
     <plugin name="cordova-plugin-battery-status" />
-    <plugin name="cordova-plugin-camera" />
     <plugin name="cordova-plugin-media-capture" />
     <plugin name="cordova-plugin-console" />
     <plugin name="cordova-plugin-contacts" />
@@ -57,8 +61,6 @@
     <plugin name="cordova-plugin-device-motion" />
     <plugin name="cordova-plugin-device-orientation" />
     <plugin name="cordova-plugin-dialogs" />
-    <plugin name="cordova-plugin-file" />
-    <plugin name="cordova-plugin-file-transfer" />
     <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-globalization" />
     <plugin name="cordova-plugin-inappbrowser" />
