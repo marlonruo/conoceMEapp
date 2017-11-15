@@ -27,6 +27,12 @@
 <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 <link rel="stylesheet" type="text/css" href="css/index.css" />
+<link href="applozic/css/mck-combined.min.css" rel="stylesheet">
+<link href="applozic/css/app/mck-sidebox-1.0.css" rel="stylesheet">
+<link href="applozic/css/app/mck-mobile-fullview.css" rel="stylesheet">
+
+
+
 <link href="css/nouislider.css" rel="stylesheet">
 <script src="https://static.opentok.com/v2/js/opentok.js"></script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -97,6 +103,7 @@
 
 <body onLoad="inicio()">
 <script>
+	var v_userId
 	var id = 0;	
 	var p_nombre;	
 	var p_apellido;
@@ -385,7 +392,10 @@ var foto9 ='a'
 										$('#bt_chat').show()
 										$('#usuarios').load('https://conoceme.vip/galeria_app.php?id='+id)
 										llamadas()
+										$('#chat').show()
 										$('#chat').load('chat.html')
+										alert('sicarga')	
+										
 									}
 							}
 						})
@@ -2168,9 +2178,8 @@ snapSlider.noUiSlider.on('update', function( values, handle ) {
  	
  	
  	
- 	<div id='chat' style="position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; background-color:#FCDA3E; display:none; z-index:1">
-		<div id='chat_frame' style="position:absolute; width: 100%; height: 92%; top: 8%; background:#8E8E8E">
-		</div>
+ 	<div id='chat' style="position: absolute; width: 100%; height:92%; top: 8%; left: 0px; display:none">
+		
   </div><!--/////////// fin Chat-->
   	
   		
@@ -2532,7 +2541,7 @@ snapSlider.noUiSlider.on('update', function( values, handle ) {
   
   
   
-  <div id="menu_inicio" class="menu sombra" style="position: absolute; width: 100%; height: 8%; background:#2D2A32; display: none"> 
+  <div id="menu_inicio" class="menu sombra" style="position: absolute; width: 100%; height: 8%; background:#2D2A32; display: none; z-index:9"> 
   			<img class="centrar" src="img/logo_menu.png" style="height: 80%;"/> 
 		  	<img id="bt_menu" src="img/menu.png" style="height: 60%; top: 20%; left: 30px; position: absolute; cursor: pointer; display:none"/>
 		  	<img id='bt_chat' src="img/mensaje_blanco.png" style="height: 54%; top: 23%; right: 30px; position: absolute; display: none"/>
@@ -2540,7 +2549,7 @@ snapSlider.noUiSlider.on('update', function( values, handle ) {
   </div>
   
   
-  <div id="oscurese" style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,34,.7); display: none"></div>
+  <div id="oscurese" style="position: absolute; width: 100%; height: 100%; background: rgba(0,0,34,.7); display: none; z-index:10"></div>
   
   <div id="menu" style="position:absolute; width:100%; height:92%; background:rgba(255,255,255,1.00); left: -100%; top: 8%; z-index: 100000">
 			<div class="textos_g" style="position: absolute; top: 12%; left: 15%; color:#424243; font-family:ariBold; cursor: pointer">MENU</div>
